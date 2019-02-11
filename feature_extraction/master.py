@@ -22,11 +22,11 @@ def train():
     load_trained_model = False
     name_loaded_model = "resnet50_model.h5"
     save_model = True
-    name_saved_model = "resnet50_model.h5"
+    name_saved_model = "resnet50_model_v2_epochs_2.h5"
 
     num_layer_trainable = 15
 
-    path_train = "data/rider_images/train_v1/"
+    path_train = "data/rider_images/train_v2/"
 
     # ---------program----------
     if load_trained_model:
@@ -66,7 +66,7 @@ def train():
     x_train = np.asarray(x_train)
     y_train = np.asarray(y_train)
 
-    model.fit(x_train, y_train, batch_size=10, epochs=3)
+    model.fit(x_train, y_train, batch_size=10, epochs=2)
 
     if save_model:
         model.save("data/" + name_saved_model)
@@ -74,10 +74,10 @@ def train():
 
 def test():
     # ---------parameter---------
-    name_saved_model = "resnet50_model.h5"
-    path_test = "data/rider_images/test_v1/"
+    name_saved_model = "resnet50_model_v2_epochs_2.h5"
+    path_test = "data/rider_images/test_v2/"
 
-    excel_file_name = "Dist-matrix_all.xlsx"
+    excel_file_name = "Dist-matrix_v2_epochs_2.xlsx"
 
     # ---------program----------
     model = load_model("data/" + name_saved_model,
