@@ -6,9 +6,11 @@ import ntpath
 
 
 def split_data_into_train_test_set():
+    # ---------parameter---------
     base_path = "data/rider_images/"
     data_folder = "all_v2/"
 
+    # ---------program----------
     version = int(re.search(r'\d+', data_folder).group())
 
     if os.path.exists(base_path + "train_v" + str(version)):
