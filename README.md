@@ -1,4 +1,4 @@
-# Ride-on-Time
+# Ride on Time
 Bachelorarbeit TU Wien
 
 Motion-Detection: Rider gets detected and a picture is take if he passes the virtual finish line
