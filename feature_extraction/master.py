@@ -11,7 +11,6 @@ from scipy.spatial.distance import cdist
 
 import ntpath
 from glob import glob
-from random import shuffle
 import xlsxwriter
 
 from feature_extraction.triplet_loss import batch_hard_triplet_loss_keras
@@ -22,11 +21,11 @@ def train():
     load_trained_model = False
     name_loaded_model = "resnet50_model.h5"
     save_model = True
-    name_saved_model = "resnet50_model_v2_epochs_2.h5"
+    name_saved_model = "resnet50_model_v3_epochs_1.h5"
 
     num_layer_trainable = 15
 
-    path_train = "data/rider_images/train_v2/"
+    path_train = "data/rider_images/train_v3/"
 
     # ---------program----------
     if load_trained_model:
@@ -45,7 +44,7 @@ def train():
     y_train = []
 
     img_name_list = glob(path_train + "*.jpg")
-    shuffle(img_name_list)
+    # img_name_list.sort()
 
     for index, path_and_name in enumerate(img_name_list):
         name_only = ntpath.basename(path_and_name)
@@ -66,7 +65,7 @@ def train():
     x_train = np.asarray(x_train)
     y_train = np.asarray(y_train)
 
-    model.fit(x_train, y_train, batch_size=10, epochs=2)
+    model.fit(x_train, y_train, batch_size=50, epochs=1, shuffle=True, callbacks=[tb_callback])
 
     if save_model:
         model.save("data/" + name_saved_model)
@@ -74,10 +73,10 @@ def train():
 
 def test():
     # ---------parameter---------
-    name_saved_model = "resnet50_model_v2_epochs_2.h5"
-    path_test = "data/rider_images/test_v2/"
+    name_saved_model = "resnet50_model_v3_epochs_1.h5"
+    path_test = "data/rider_images/test_v3/"
 
-    excel_file_name = "Dist-matrix_v2_epochs_2.xlsx"
+    excel_file_name = "Dist-matrix_v3_epochs_2.xlsx"
 
     # ---------program----------
     model = load_model("data/" + name_saved_model,
@@ -154,4 +153,4 @@ def test():
 
 if __name__ == "__main__":
     train()
-    test()
+    # test()
