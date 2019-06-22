@@ -1,5 +1,5 @@
 # Code written by Simon Schauppenlehner
-# Last change: 19.06.2019
+# Last change: 22.06.2019
 
 from picamera import PiCamera
 from picamera.array import PiRGBArray

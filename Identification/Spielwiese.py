@@ -1,3 +1,6 @@
+# Code written by Simon Schauppenlehner
+# Last change: 22.06.2019
+
 from Evaluator import Evaluator
 from Rider import Rider
 from Image import Image

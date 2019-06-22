@@ -1,3 +1,7 @@
+# Code written by Simon Schauppenlehner
+# Last change: 22.06.2019
+
+
 class hyper_para:
     # Parameters for training
     epochs = 15

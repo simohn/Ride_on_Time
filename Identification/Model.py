@@ -1,3 +1,6 @@
+# Code written by Simon Schauppenlehner
+# Last change: 22.06.2019
+
 from tensorflow.contrib.keras.api.keras.models import load_model
 from tensorflow.contrib.keras.api.keras.applications.resnet50 import ResNet50
 from tensorflow.contrib.keras.api.keras.optimizers import Adam

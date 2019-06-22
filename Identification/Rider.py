@@ -1,3 +1,6 @@
+# Code written by Simon Schauppenlehner
+# Last change: 22.06.2019
+
 import numpy as np
 
 

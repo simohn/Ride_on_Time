@@ -1,3 +1,7 @@
+# Author: Olivier Moindrot
+# Code partly changed by Simon Schauppenlehner
+# Last change: 22.06.2019
+
 """Define functions to create the triplet loss with online triplet mining."""
 
 import tensorflow as tf
