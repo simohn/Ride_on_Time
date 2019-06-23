@@ -1,15 +1,16 @@
 # Code written by Simon Schauppenlehner
 # Last change: 22.06.2019
 
+
 class Image:
 
-    # private class variables
+    # Private class variables
 
     _unique_id = 0
-    # every Image has the same model
+    # Every Image has the same model
     _model = None
 
-    #  public methods
+    #  Public methods
 
     def __init__(self, imgage_path, rider_id):
         self.id = Image._get_unique_id()
@@ -34,7 +35,7 @@ class Image:
     def get_model_details(cls):
         return cls._model.get_model_details()
 
-    # private methods
+    # Private methods
 
     @classmethod
     def _get_unique_id(cls):

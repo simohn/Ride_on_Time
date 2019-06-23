@@ -8,7 +8,7 @@ from scipy.spatial.distance import cdist
 
 class Evaluator:
 
-    # public methods
+    # Public methods
 
     def __init__(self):
         self.riders = []
@@ -199,7 +199,7 @@ class Evaluator:
 
         return None
 
-    # private methods
+    # Private methods
 
     def _get_color_code(self, dist, dist_max, dist_min):
 

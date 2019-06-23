@@ -17,7 +17,7 @@ from Hyperparameters import hyper_para
 
 class Model:
 
-    # public methods
+    # Public methods
 
     def __init__(self, trained_model=False, epochs=10, batch_size=10, pooling="avg", trainable_layer=15):
         self.epochs = epochs
@@ -51,9 +51,10 @@ class Model:
         adam = Adam(lr=1e-3, decay=1e-6)
         self.model.compile(optimizer=adam, loss=batch_hard_triplet_loss_keras, metrics=['accuracy'])
 
-    def set_parameters(self, epochs, batch_size, trainable_layer):
+    def set_parameters(self, epochs, batch_size, pooling, trainable_layer):
         self.epochs = epochs
         self.batch_size = batch_size
+        self.pooling = pooling
         self.trainable_layer = trainable_layer
 
     def train(self, num_riders=48):

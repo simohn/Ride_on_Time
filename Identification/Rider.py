@@ -6,11 +6,11 @@ import numpy as np
 
 class Rider:
 
-    # Private Class variable
+    # Private class variable
 
-    _unique_id = 0
+    _unique_id = 1000
 
-    #  public methods
+    #  Public methods
 
     def __init__(self, id=-1):
         if id == -1:
@@ -60,7 +60,7 @@ class Rider:
     def get_features_variance(self):
         return self.features_variance
 
-    # private methods
+    # Private methods
 
     @classmethod
     def _get_unique_id(cls):

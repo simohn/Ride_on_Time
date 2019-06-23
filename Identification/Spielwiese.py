@@ -94,7 +94,7 @@ if __name__ == "__main__":
     # train()
     # evaluate()
 
-    #for n in range(5, 26, 5):
+    # for n in range(5, 26, 5):
     #   hyper_para.trainable_layer = n
     #   train()
     #  evaluate()

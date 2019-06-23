@@ -140,6 +140,6 @@ def create_sprite_image():
 
 
 if __name__ == "__main__":
-    #calc_embeddings()
-    #create_sprite_image()
+    # calc_embeddings()
+    # create_sprite_image()
     setup_tensorboard()
