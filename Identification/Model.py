@@ -6,7 +6,7 @@ from tensorflow.contrib.keras.api.keras.applications.resnet50 import ResNet50
 from tensorflow.contrib.keras.api.keras.optimizers import Adam
 
 from Triplet_loss import batch_hard_triplet_loss_keras
-from DataGenerator import data_generator
+from Data_generator import Data_generator
 
 from tensorflow.contrib.keras.api.keras.preprocessing import image
 from tensorflow.contrib.keras.api.keras.applications.resnet50 import preprocess_input
@@ -58,7 +58,7 @@ class Model:
         self.trainable_layer = trainable_layer
 
     def train(self, num_riders=48):
-        training_generator = data_generator(np.arange(num_riders), batch_size=self.batch_size)
+        training_generator = Data_generator(np.arange(num_riders), batch_size=self.batch_size)
 
         self.model.fit_generator(generator=training_generator, epochs=self.epochs, use_multiprocessing=True, workers=6)
 

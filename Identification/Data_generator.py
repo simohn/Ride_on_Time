@@ -9,7 +9,7 @@ from tensorflow.contrib.keras.api.keras.applications.resnet50 import preprocess_
 import ntpath
 
 
-class data_generator(keras.utils.Sequence):
+class Data_generator(keras.utils.Sequence):
 
     def __init__(self, list_ids, batch_size=10, shuffle=True, path_train_images="data/riders_train_images/"):
         self.batch_size = batch_size
