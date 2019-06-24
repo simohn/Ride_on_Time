@@ -2,3 +2,4 @@ tensorflow-gpu
 scipy
 xlsxwriter
 Pillow
+opencv-python

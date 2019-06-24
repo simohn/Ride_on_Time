@@ -17,22 +17,18 @@ from glob import glob
 import pickle
 
 from Triplet_loss import batch_hard_triplet_loss_keras
+from Hyperparameters import hyper_para
 
-sprite_img_single_dim = 128
+sprite_img_single_dim = 96
 
-epochs = 40
-batch_size = 10
-pooling = "avg"
-trainable_layer = 20
-
-path_test = "data\\rider_images\\train_v4\\"
+path_test = "data\\riders_visu_images\\"
 
 
 def calc_embeddings():
     # ---------parameter---------
-    name_saved_model = "data\\resnet50_model_epochs_" + str(epochs) + "_batchSize_" + \
-                                   str(batch_size) + "_trainableLayer_" + str(trainable_layer) + \
-                                   "_pooling_" + pooling + ".h5"
+    name_saved_model = "data\\models_export\\resnet50_model_epochs_" + str(hyper_para.epochs) + "_batchSize_" + \
+                                   str(hyper_para.batch_size) + "_trainableLayer_" + str(hyper_para.trainable_layer) + \
+                                   "_pooling_" + hyper_para.pooling + "_margin_" + str(hyper_para.margin) + ".h5"
 
     # ---------program----------
     model = load_model(name_saved_model,
@@ -40,7 +36,7 @@ def calc_embeddings():
 
     img_name_list = glob(path_test + "*.jpg")
 
-    img_name_list.sort(key=lambda img: int(img.split('\\')[3].split('_')[0]))
+    img_name_list.sort(key=lambda img: int(img.split('\\')[2].split('_')[0]))
 
     features_all = np.zeros((len(img_name_list), 2048))
     labels = np.zeros(len(img_name_list)
@@ -49,7 +45,7 @@ def calc_embeddings():
 
     for index, path_and_name in enumerate(img_name_list):
         img = image.load_img(path_and_name)
-        label = path_and_name.split('\\')[3].split('_')[0]
+        label = path_and_name.split('\\')[2].split('_')[0]
 
         # Pre-process image
         x = image.img_to_array(img)
@@ -77,7 +73,7 @@ def setup_tensorboard():
     with open('data\\temp\\labels.pickle', 'rb') as handle:
         labels = pickle.load(handle)
 
-    log_dir = 'tensorboard_log'
+    log_dir = 'data\\tensorboard\\tensorboard_log'
     name_to_visualise_variable = 'riders_embedding'
     path_for_metadata = os.path.join(log_dir, 'metadata.tsv')
 
@@ -110,11 +106,11 @@ def setup_tensorboard():
 
 def create_sprite_image():
 
-    with open('data\\labels.pickle', 'rb') as handle:
+    with open('data\\temp\\labels.pickle', 'rb') as handle:
         labels = pickle.load(handle)
 
     img_name_list = glob(path_test + "*.jpg")
-    img_name_list.sort(key=lambda img: int(img.split('\\')[3].split('_')[0]))
+    img_name_list.sort(key=lambda img: int(img.split('\\')[2].split('_')[0]))
 
     sprite_dim = int(math.sqrt(len(img_name_list))+1)
 
@@ -136,7 +132,7 @@ def create_sprite_image():
 
                 index += 1
 
-    cv.imwrite('sprite.png', sprite_image)
+    cv.imwrite('data\\tensorboard\\sprite.png', sprite_image)
 
 
 if __name__ == "__main__":

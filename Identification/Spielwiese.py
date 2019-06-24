@@ -50,7 +50,7 @@ def evaluate():
         eval.add_rider(rider)
 
     # print("Evaluate test images")
-    test_images_path_and_name = glob("data\\riders_test_images_many\\" + "*.jpg")
+    test_images_path_and_name = glob("data\\riders_test_images\\" + "*.jpg")
     test_images_path_and_name.sort()
 
     test_images = []
@@ -65,7 +65,7 @@ def evaluate():
         test_images.append(image)
 
     # print("Export statistic")
-    # eval.export_stat(test_images, "data\\stats\\Stat_" + Image.get_model_details() + ".xlsx")
+    eval.export_stat(test_images, "data\\stats\\Stat_" + Image.get_model_details() + ".xlsx")
 
     print("--------------------")
     print("Model: " + model.get_model_details())
@@ -73,11 +73,14 @@ def evaluate():
 
 
 if __name__ == "__main__":
-    hyper_para.epochs = 15
-    hyper_para.batch_size = 10
-    hyper_para.pooling = "max"
-    hyper_para.trainable_layer = 15
-    hyper_para.margin = 15
+    hyper_para.epochs = 0
+    hyper_para.batch_size = 0
+    hyper_para.pooling = "avg"
+    hyper_para.trainable_layer = 0
+    hyper_para.margin = 18
+
+    evaluate()
+    exit(0)
 
     models_path = glob("data\\models_export\\" + "*.h5")
 

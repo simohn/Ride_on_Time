@@ -1,0 +1,64 @@
+--------------------
+Model: epochs_10_batchSize_10_trainableLayer_15_pooling_max_margin_20
+Validation accuracy: 0.9518072289156626
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_10_pooling_max_margin_20
+Validation accuracy: 0.963855421686747
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_max_margin_12
+Validation accuracy: 0.9397590361445783
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_max_margin_15
+Validation accuracy: 0.9879518072289156
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_max_margin_18
+Validation accuracy: 1.0
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_max_margin_20
+Validation accuracy: 0.9759036144578314
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_max_margin_25
+Validation accuracy: 0.9879518072289156
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_max_margin_3
+Validation accuracy: 0.9518072289156626
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_max_margin_50
+Validation accuracy: 0.963855421686747
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_max_margin_6
+Validation accuracy: 0.9879518072289156
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_max_margin_9
+Validation accuracy: 0.963855421686747
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_20_pooling_max_margin_20
+Validation accuracy: 0.927710843373494
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_25_pooling_max_margin_20
+Validation accuracy: 0.9156626506024096
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_5_pooling_max_margin_20
+Validation accuracy: 0.9879518072289156
+--------------------
+Model: epochs_15_batchSize_15_trainableLayer_15_pooling_max_margin_18
+Validation accuracy: 0.9759036144578314
+--------------------
+Model: epochs_15_batchSize_5_trainableLayer_15_pooling_max_margin_18
+Validation accuracy: 0.9759036144578314
+--------------------
+Model: epochs_20_batchSize_10_trainableLayer_15_pooling_max_margin_20
+Validation accuracy: 0.963855421686747
+--------------------
+Model: epochs_25_batchSize_10_trainableLayer_15_pooling_max_margin_20
+Validation accuracy: 0.9879518072289156
+--------------------
+Model: epochs_4_batchSize_10_trainableLayer_15_pooling_max_margin_20
+Validation accuracy: 0.927710843373494
+--------------------
+Model: epochs_5_batchSize_10_trainableLayer_15_pooling_max_margin_20
+Validation accuracy: 0.963855421686747
+--------------------
+Model: epochs_0_batchSize_0_trainableLayer_0_pooling_avg_margin_18
+Validation accuracy: 0.8192771084337349
+

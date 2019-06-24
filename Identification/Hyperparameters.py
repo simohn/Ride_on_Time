@@ -4,12 +4,12 @@
 
 class hyper_para:
     # Parameters for training
-    epochs = 15
-    batch_size = 10
+    epochs = 0
+    batch_size = 0
 
     # Parameters for model
-    pooling = "max"
-    trainable_layer = 15
+    pooling = "avg"
+    trainable_layer = 0
 
     # Parameters for triplet loss
-    margin = 10
+    margin = 18
