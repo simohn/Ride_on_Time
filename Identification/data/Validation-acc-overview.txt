@@ -79,3 +79,21 @@ Model: epochs_15_batchSize_10_trainableLayer_5_pooling_avg_margin_20
 --------------------
 Model: epochs_25_batchSize_10_trainableLayer_15_pooling_avg_margin_20
 0.9759036144578314
+--------------------
+Model: epochs_15_batchSize_4_trainableLayer_15_pooling_max_margin_18
+0.9879518072289156
+--------------------
+Model: epochs_15_batchSize_5_trainableLayer_15_pooling_max_margin_18
+1.0
+--------------------
+Model: epochs_15_batchSize_4_trainableLayer_15_pooling_max_margin_15
+0.963855421686747
+--------------------
+Model: epochs_15_batchSize_7_trainableLayer_15_pooling_max_margin_18
+0.9759036144578314
+--------------------
+Model: epochs_15_batchSize_8_trainableLayer_15_pooling_max_margin_16
+0.963855421686747
+--------------------
+Model: epochs_15_batchSize_9_trainableLayer_15_pooling_max_margin_17
+0.9879518072289156
