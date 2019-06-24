@@ -61,4 +61,21 @@ Validation accuracy: 0.963855421686747
 --------------------
 Model: epochs_0_batchSize_0_trainableLayer_0_pooling_avg_margin_18
 Validation accuracy: 0.8192771084337349
-
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_avg_margin_15
+0.9759036144578314
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_avg_margin_18
+0.9518072289156626
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_avg_margin_25
+0.927710843373494
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_15_pooling_avg_margin_6
+0.963855421686747
+--------------------
+Model: epochs_15_batchSize_10_trainableLayer_5_pooling_avg_margin_20
+0.9518072289156626
+--------------------
+Model: epochs_25_batchSize_10_trainableLayer_15_pooling_avg_margin_20
+0.9759036144578314
