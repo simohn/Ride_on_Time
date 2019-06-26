@@ -97,3 +97,6 @@ Model: epochs_15_batchSize_8_trainableLayer_15_pooling_max_margin_16
 --------------------
 Model: epochs_15_batchSize_9_trainableLayer_15_pooling_max_margin_17
 0.9879518072289156
+--------------------
+Model: epochs_50_batchSize_10_trainableLayer_15_pooling_max_margin_18
+0.9879518072289156
